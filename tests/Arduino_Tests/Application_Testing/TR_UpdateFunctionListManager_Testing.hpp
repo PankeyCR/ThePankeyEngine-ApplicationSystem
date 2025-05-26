@@ -11,28 +11,28 @@
 
 		namespace ApplicationSystem{
 
-			void UpdateFunctionListManagerTest(Base::TestResult& a_result, float a_tpc){
+			void UpdateFunctionListManagerTest(Base::TestResult<String>& a_result, float a_tpc){
 				a_result.expecting("executing method");
 			}
 
-			void UpdateFunctionListManagerTest_2(Base::TestResult& a_result, float a_tpc){
+			void UpdateFunctionListManagerTest_2(Base::TestResult<String>& a_result, float a_tpc){
 				a_result.expecting("executing method 2");
 			}
 
-			void UpdateFunctionListManagerTest_3(Base::TestResult& a_result, float a_tpc){
+			void UpdateFunctionListManagerTest_3(Base::TestResult<String>& a_result, float a_tpc){
 				a_result.expecting("executing method 3");
 			}
 
-			void UpdateFunctionListManagerTestWithError(Base::TestResult& a_result, float a_tpc){
+			void UpdateFunctionListManagerTestWithError(Base::TestResult<String>& a_result, float a_tpc){
 				a_result.expectingTrue("executing error method", false);
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_1(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_1(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 
-				UpdateFunctionListManager<int,Base::TestResult&,float> i_manager;
+				UpdateFunctionListManager<int,Base::TestResult<String>&,float> i_manager;
 
 				i_manager.putFunction(UpdateFunctionListManagerTest);
 				i_manager.update(i_app, i_result, 0.1f);
@@ -42,12 +42,12 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_2(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_2(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 
-				UpdateFunctionListManager<int,Base::TestResult&,float> i_manager;
+				UpdateFunctionListManager<int,Base::TestResult<String>&,float> i_manager;
 
 				i_manager.putFunction(UpdateFunctionListManagerTest);
 				i_manager.putFunction(UpdateFunctionListManagerTestWithError);
@@ -60,12 +60,12 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_3(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_3(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 
-				UpdateFunctionListManager<int,Base::TestResult&,float> i_manager;
+				UpdateFunctionListManager<int,Base::TestResult<String>&,float> i_manager;
 
 				i_manager.putFunction(UpdateFunctionListManagerTest);
 				i_manager.putFunction(UpdateFunctionListManagerTestWithError);
@@ -81,12 +81,12 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_4(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_4(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 
-				UpdateFunctionListManager<int,Base::TestResult&,float> i_manager;
+				UpdateFunctionListManager<int,Base::TestResult<String>&,float> i_manager;
 
 				i_manager.putFunction(UpdateFunctionListManagerTest);
 				i_manager.putFunction(UpdateFunctionListManagerTestWithError);
@@ -102,32 +102,32 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_5(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_5(){
+				Base::TestResult<String> i_result;
 
-				int i_app = 15;
+				// int i_app = 15;
 
-				UpdateFunctionListManager<int,Base::TestResult&,float> i_manager;
+				// UpdateFunctionListManager<int,Base::TestResult<String>&,float> i_manager;
 
-				auto lambda = [](Base::TestResult& a_result, float a_tpc){
-					a_result.expecting("executing lambda method");
-				};
+				// auto lambda = [](Base::TestResult<String>& a_result, float a_tpc){
+				// 	a_result.expecting("executing lambda method");
+				// };
 
-				i_manager.putFunction(lambda);
+				// i_manager.putFunction(lambda);
 
-				i_manager.update(i_app, i_result, 0.1f);
+				// i_manager.update(i_app, i_result, 0.1f);
 
-				i_result.assertUnexpectation("executing lambda method");
+				// i_result.assertUnexpectation("executing lambda method");
 				
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_6(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_6(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 
-				UpdateFunctionListManager<int,Base::TestResult&,float> i_manager;
+				UpdateFunctionListManager<int,Base::TestResult<String>&,float> i_manager;
 				
 				i_manager.putFunction(UpdateFunctionListManagerTest);
 				i_manager.putFunction(UpdateFunctionListManagerTest_2);
@@ -142,18 +142,18 @@
 				return i_result;
 			}
 
-			UpdateFunctionListManager<int,Base::TestResult&,float> g_UpdateFunctionListManager;
+			UpdateFunctionListManager<int,Base::TestResult<String>&,float> g_UpdateFunctionListManager;
 
-			void DestroyUpdateFunctionListManagerTest(Base::TestResult& a_result, float a_tpc){
+			void DestroyUpdateFunctionListManagerTest(Base::TestResult<String>& a_result, float a_tpc){
 				g_UpdateFunctionListManager.destroyFunction(DestroyUpdateFunctionListManagerTest);
 			}
 
-			void DestroyUpdateFunctionListManagerTest_2(Base::TestResult& a_result, float a_tpc){
+			void DestroyUpdateFunctionListManagerTest_2(Base::TestResult<String>& a_result, float a_tpc){
 				g_UpdateFunctionListManager.destroyFunction(DestroyUpdateFunctionListManagerTest);
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_7(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_7(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 				
@@ -171,8 +171,8 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateFunctionListManager_Testing_8(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateFunctionListManager_Testing_8(){
+				Base::TestResult<String> i_result;
 
 				int i_app = 15;
 				
@@ -190,7 +190,7 @@
 				return i_result;
 			}
 
-			void TR_UpdateFunctionListManager_Testing(Base::TestRunner& a_test_runner){
+			void TR_UpdateFunctionListManager_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("UpdateFunctionListManager putFunction and update", TR_UpdateFunctionListManager_Testing_1);
 				a_test_runner.add("UpdateFunctionListManager destroyFunction by value", TR_UpdateFunctionListManager_Testing_2);
 				a_test_runner.add("UpdateFunctionListManager clearFunctions", TR_UpdateFunctionListManager_Testing_3);

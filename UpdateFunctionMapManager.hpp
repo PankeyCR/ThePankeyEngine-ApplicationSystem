@@ -10,7 +10,7 @@
 		namespace ApplicationSystem{
 
 			template<class K, class... Args>
-			class UpdateFunctionMapManager : virtual public UpdateManager<Args...>{
+			class UpdateFunctionMapManager : virtual public Base::UpdateManager<Args...>{
 				public:
 
 					UpdateFunctionMapManager(){}

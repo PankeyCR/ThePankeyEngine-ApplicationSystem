@@ -12,7 +12,7 @@
 
 		namespace ApplicationSystem{
 
-			Base::TestResult g_loop_result;
+			Base::TestResult<String> g_loop_result;
 
 			class LoopExample{
 				public:
@@ -58,7 +58,7 @@
 			// 	}
 			// };
 
-			Base::TestResult TR_LoopManager_Testing_1(){
+			Base::TestResult<String> TR_LoopManager_Testing_1(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -70,13 +70,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_2(){
+			Base::TestResult<String> TR_LoopManager_Testing_2(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -89,13 +89,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_3(){
+			Base::TestResult<String> TR_LoopManager_Testing_3(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -107,13 +107,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_4(){
+			Base::TestResult<String> TR_LoopManager_Testing_4(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -126,13 +126,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_5(){
+			Base::TestResult<String> TR_LoopManager_Testing_5(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -144,13 +144,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_6(){
+			Base::TestResult<String> TR_LoopManager_Testing_6(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -163,13 +163,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_7(){
+			Base::TestResult<String> TR_LoopManager_Testing_7(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -181,13 +181,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_8(){
+			Base::TestResult<String> TR_LoopManager_Testing_8(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -200,13 +200,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_9(){
+			Base::TestResult<String> TR_LoopManager_Testing_9(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -218,13 +218,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_10(){
+			Base::TestResult<String> TR_LoopManager_Testing_10(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -237,13 +237,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_11(){
+			Base::TestResult<String> TR_LoopManager_Testing_11(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -255,13 +255,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_12(){
+			Base::TestResult<String> TR_LoopManager_Testing_12(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -274,13 +274,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_13(){
+			Base::TestResult<String> TR_LoopManager_Testing_13(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -292,13 +292,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_14(){
+			Base::TestResult<String> TR_LoopManager_Testing_14(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -311,13 +311,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_15(){
+			Base::TestResult<String> TR_LoopManager_Testing_15(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -329,13 +329,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_16(){
+			Base::TestResult<String> TR_LoopManager_Testing_16(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -348,13 +348,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_17(){
+			Base::TestResult<String> TR_LoopManager_Testing_17(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -366,13 +366,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_18(){
+			Base::TestResult<String> TR_LoopManager_Testing_18(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -385,13 +385,13 @@
 
 				g_loop_result.assertExpectation("LoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_19(){
+			Base::TestResult<String> TR_LoopManager_Testing_19(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -403,13 +403,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_20(){
+			Base::TestResult<String> TR_LoopManager_Testing_20(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -422,13 +422,13 @@
 
 				g_loop_result.assertExpectation("LoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_21(){
+			Base::TestResult<String> TR_LoopManager_Testing_21(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -440,13 +440,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_22(){
+			Base::TestResult<String> TR_LoopManager_Testing_22(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -459,13 +459,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_23(){
+			Base::TestResult<String> TR_LoopManager_Testing_23(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -477,13 +477,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_LoopManager_Testing_24(){
+			Base::TestResult<String> TR_LoopManager_Testing_24(){
 				g_loop_result.clear();
 
 				LoopManager<LoopExample> i_manager;
@@ -496,13 +496,13 @@
 
 				g_loop_result.assertExpectation("TPCLoopExampleMethod");
 
-				Base::TestResult i_result = g_loop_result;
+				Base::TestResult<String> i_result = g_loop_result;
 				g_loop_result.clear();
 
 				return i_result;
 			}
 
-			void TR_LoopManager_Testing(Base::TestRunner& a_test_runner){
+			void TR_LoopManager_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("TR_LoopManager_Testing addInitialization, initialize", TR_LoopManager_Testing_1);
 				a_test_runner.add("TR_LoopManager_Testing putInitialization, initialize", TR_LoopManager_Testing_2);
 				a_test_runner.add("TR_LoopManager_Testing addInitialization(App), initialize", TR_LoopManager_Testing_3);

@@ -11,16 +11,16 @@
 
 		namespace ApplicationSystem{
 	
-			Base::TestResult TR_DefaultAppSettings_Testing_1(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_1(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 				
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_2(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_2(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -29,13 +29,13 @@
 				int i_value = i_settings.getInt("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containInt("name"));
-				i_result.assertCharArrayEqual("value should be 15", i_value, 15);
+				i_result.assertEqual("value should be 15", i_value, 15);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_3(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_3(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -44,13 +44,13 @@
 				long i_value = i_settings.getLong("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containLong("name"));
-				i_result.assertCharArrayEqual("value should be 15", i_value, 1590l);
+				i_result.assertEqual("value should be 15", i_value, 1590l);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_4(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_4(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -59,13 +59,13 @@
 				float i_value = i_settings.getFloat("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containFloat("name"));
-				i_result.assertCharArrayEqual("value should be 15.6f", i_value, 15.6f);
+				i_result.assertEqual("value should be 15.6f", i_value, 15.6f);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_5(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_5(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -74,13 +74,13 @@
 				Base::CharArray i_value = i_settings.getCharArray("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containCharArray("name"));
-				i_result.assertCharArrayEqual("value should be 15.6f", i_value, Base::CharArray("Frank"));
+				i_result.assertEqual("value should be 15.6f", i_value, Base::CharArray("Frank"));
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_6(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_6(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -89,13 +89,13 @@
 				bool i_value = i_settings.getBoolean("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containBoolean("name"));
-				i_result.assertCharArrayEqual("value should be 15.6f", i_value, true);
+				i_result.assertEqual("value should be 15.6f", i_value, true);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_8(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_8(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -110,8 +110,8 @@
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_9(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_9(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -126,8 +126,8 @@
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_10(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_10(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -142,8 +142,8 @@
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_11(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_11(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -158,8 +158,8 @@
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_12(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_12(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -174,8 +174,8 @@
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_16(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_16(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -185,13 +185,13 @@
 				int i_value = i_settings.getInt("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containInt("name"));
-				i_result.assertCharArrayEqual("value should be 6", i_value, 6);
+				i_result.assertEqual("value should be 6", i_value, 6);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_17(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_17(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -201,13 +201,13 @@
 				long i_value = i_settings.getLong("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containLong("name"));
-				i_result.assertCharArrayEqual("value should be 543", i_value, 543l);
+				i_result.assertEqual("value should be 543", i_value, 543l);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_18(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_18(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -217,13 +217,13 @@
 				float i_value = i_settings.getFloat("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containFloat("name"));
-				i_result.assertCharArrayEqual("value should be 65.7f", i_value, 65.7f);
+				i_result.assertEqual("value should be 65.7f", i_value, 65.7f);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_19(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_19(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -233,13 +233,13 @@
 				Base::CharArray i_value = i_settings.getCharArray("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containCharArray("name"));
-				i_result.assertCharArrayEqual("value should be Sam", i_value, Base::CharArray("Sam"));
+				i_result.assertEqual("value should be Sam", i_value, Base::CharArray("Sam"));
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_20(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_20(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -249,13 +249,13 @@
 				bool i_value = i_settings.getBoolean("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containBoolean("name"));
-				i_result.assertCharArrayEqual("value should be false", i_value, false);
+				i_result.assertEqual("value should be false", i_value, false);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_22(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_22(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -265,13 +265,13 @@
 				int i_value = i_settings.getInt("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containInt("name"));
-				i_result.assertCharArrayEqual("value should be 6", i_value, 6);
+				i_result.assertEqual("value should be 6", i_value, 6);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_23(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_23(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -281,13 +281,13 @@
 				long i_value = i_settings.getLong("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containLong("name"));
-				i_result.assertCharArrayEqual("value should be 543", i_value, 543l);
+				i_result.assertEqual("value should be 543", i_value, 543l);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_24(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_24(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -297,13 +297,13 @@
 				float i_value = i_settings.getFloat("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containFloat("name"));
-				i_result.assertCharArrayEqual("value should be 65.7f", i_value, 65.7f);
+				i_result.assertEqual("value should be 65.7f", i_value, 65.7f);
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_25(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_25(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -313,13 +313,13 @@
 				Base::CharArray i_value = i_settings.getCharArray("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containCharArray("name"));
-				i_result.assertCharArrayEqual("value should be Sam", i_value, Base::CharArray("Sam"));
+				i_result.assertEqual("value should be Sam", i_value, Base::CharArray("Sam"));
 
 				return i_result;
 			}
 		
-			Base::TestResult TR_DefaultAppSettings_Testing_26(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_DefaultAppSettings_Testing_26(){
+				Base::TestResult<String> i_result;
 
 				DefaultAppSettings i_settings;
 
@@ -329,12 +329,12 @@
 				bool i_value = i_settings.getBoolean("name");
 				
 				i_result.assertTrue("settings should contain name", i_settings.containBoolean("name"));
-				i_result.assertCharArrayEqual("value should be false", i_value, false);
+				i_result.assertEqual("value should be false", i_value, false);
 
 				return i_result;
 			}
 
-			void TR_DefaultAppSettings_Testing(Base::TestRunner& a_test_runner){
+			void TR_DefaultAppSettings_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("DefaultAppSettings Constructor", TR_DefaultAppSettings_Testing_1);
 				a_test_runner.add("DefaultAppSettings addInt, containInt, getInt", TR_DefaultAppSettings_Testing_2);
 				a_test_runner.add("DefaultAppSettings addLong, containLong, getLong", TR_DefaultAppSettings_Testing_3);

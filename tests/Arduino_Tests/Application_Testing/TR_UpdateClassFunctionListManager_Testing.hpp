@@ -13,19 +13,19 @@
 		
 			class UpdateClassFunctionListExample{
 				public:
-				void UpdateClassFunctionListManagerTest(Base::TestResult& a_result, float a_tpc){
+				void UpdateClassFunctionListManagerTest(Base::TestResult<String>& a_result, float a_tpc){
 					a_result.assertTrue("executing class method", true);
 				}
 
-				void UpdateClassFunctionListManagerTestWithError(Base::TestResult& a_result, float a_tpc){
+				void UpdateClassFunctionListManagerTestWithError(Base::TestResult<String>& a_result, float a_tpc){
 					a_result.assertTrue("executing class method with error", false);
 				}
 			};
 		
-			Base::TestResult TR_UpdateClassFunctionListManager_Testing_1(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionListManager_Testing_1(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionListExample i_example;
 
 				i_manager.add(&UpdateClassFunctionListExample::UpdateClassFunctionListManagerTest);
@@ -35,10 +35,10 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateClassFunctionListManager_Testing_2(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionListManager_Testing_2(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionListExample i_example;
 
 				i_manager.add(&UpdateClassFunctionListExample::UpdateClassFunctionListManagerTest);
@@ -51,10 +51,10 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateClassFunctionListManager_Testing_3(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionListManager_Testing_3(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionListExample i_example;
 
 				i_manager.add(&UpdateClassFunctionListExample::UpdateClassFunctionListManagerTest);
@@ -68,10 +68,10 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateClassFunctionListManager_Testing_4(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionListManager_Testing_4(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionListManager<UpdateClassFunctionListExample,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionListExample i_example;
 
 				i_manager.add(&UpdateClassFunctionListExample::UpdateClassFunctionListManagerTest);
@@ -87,7 +87,7 @@
 				return i_result;
 			}
 
-			void TR_UpdateClassFunctionListManager_Testing(Base::TestRunner& a_test_runner){
+			void TR_UpdateClassFunctionListManager_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("UpdateClassFunctionListManager add and update", TR_UpdateClassFunctionListManager_Testing_1);
 				a_test_runner.add("UpdateClassFunctionListManager removeUpdate by lvalue", TR_UpdateClassFunctionListManager_Testing_2);
 				a_test_runner.add("UpdateClassFunctionListManager removeUpdate by index", TR_UpdateClassFunctionListManager_Testing_3);

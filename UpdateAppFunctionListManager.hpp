@@ -17,7 +17,7 @@
 		namespace ApplicationSystem{
 
 			template<class A, class... Args>
-			class UpdateAppFunctionListManager : virtual public UpdateManager<A,Args...>{
+			class UpdateAppFunctionListManager : virtual public Base::UpdateManager<A,Args...>{
 				public:
 
 					UpdateAppFunctionListManager(){
@@ -29,19 +29,19 @@
 						UpdateFunctionListManagerLog(pankey_Log_EndMethod, "Destructor", "");
 					}
 
-					virtual void addAppFunction(Base::InvokeMethod<A&,Args...> a_state){
+					virtual void addAppFunction(Base::InvokeFunction<A&,Args...> a_state){
 						UpdateFunctionListManagerLog(pankey_Log_StartMethod, "add", "");
 						this->m_auf_list.add(a_state);
 						UpdateFunctionListManagerLog(pankey_Log_StartMethod, "add", "");
 					}
 
-					virtual void putAppFunction(Base::InvokeMethod<A&,Args...> a_state){
+					virtual void putAppFunction(Base::InvokeFunction<A&,Args...> a_state){
 						this->m_auf_list.put(a_state);
 					}
 					
-					virtual void destroyAppFunction(Base::InvokeMethod<A&,Args...> a_state){
-						UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyAppFunction", "Base::InvokeMethod<A&,Args...>");
-						Base::InvokeMethod<A&,Args...>* i_pointer = this->m_auf_list.getPointer(a_state);
+					virtual void destroyAppFunction(Base::InvokeFunction<A&,Args...> a_state){
+						UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyAppFunction", "Base::InvokeFunction<A&,Args...>");
+						Base::InvokeFunction<A&,Args...>* i_pointer = this->m_auf_list.getPointer(a_state);
 						if(i_pointer == nullptr){
 							UpdateFunctionListManagerLog(pankey_Log_EndMethod, "destroyFunction", "i_pointer == nullptr");
 							return;
@@ -61,7 +61,7 @@
 					virtual void clearAppFunctions(){
 						if(this->m_invoking_auf_list){
 							for(int x = 0; x < this->m_auf_list.length(); x++){
-								Base::InvokeMethod<A&,Args...>* f_state = m_auf_list.getPointerByIndex(x);
+								Base::InvokeFunction<A&,Args...>* f_state = m_auf_list.getPointerByIndex(x);
 								if(f_state == nullptr){
 									continue;
 								}
@@ -75,7 +75,7 @@
 					virtual void clear(){
 						if(this->m_invoking_auf_list){
 							for(int x = 0; x < this->m_auf_list.length(); x++){
-								Base::InvokeMethod<A&,Args...>* f_state = m_auf_list.getPointerByIndex(x);
+								Base::InvokeFunction<A&,Args...>* f_state = m_auf_list.getPointerByIndex(x);
 								if(f_state == nullptr){
 									continue;
 								}
@@ -104,16 +104,16 @@
 					}
 
 				protected:
-					Base::MethodList<A&,Args...> m_auf_list;
-					Base::MethodList<A&,Args...> m_deletes_auf_list;
+					Base::FunctionList<A&,Args...> m_auf_list;
+					Base::FunctionList<A&,Args...> m_deletes_auf_list;
 					bool m_invoking_auf_list = false;
 					
 					virtual void destroyAppFunctions(){
-						UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyAppFunctions", "Base::InvokeMethod<A&,Args...>");
+						UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyAppFunctions", "Base::InvokeFunction<A&,Args...>");
 						for(int x = 0; x < m_deletes_auf_list.length(); x++){
 							UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyFunctions", "iteration:");
 							UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyFunctions", x);
-							Base::InvokeMethod<A&,Args...>* f_state = m_deletes_auf_list.getPointerByIndex(x);
+							Base::InvokeFunction<A&,Args...>* f_state = m_deletes_auf_list.getPointerByIndex(x);
 							if(f_state == nullptr){
 								UpdateFunctionListManagerLog(pankey_Log_StartMethod, "destroyFunctions", "f_state == nullptr");
 								continue;

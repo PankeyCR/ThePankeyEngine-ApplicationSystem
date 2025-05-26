@@ -12,7 +12,7 @@
 
 		namespace ApplicationSystem{
 
-			Base::TestResult g_fullstatemanager_result;
+			Base::TestResult<String> g_fullstatemanager_result;
 
 			class FullStateManagerExample{
 				public:
@@ -58,7 +58,7 @@
 				}
 			};
 
-			Base::TestResult TR_FullStateManager_Testing_1(){
+			Base::TestResult<String> TR_FullStateManager_Testing_1(){
 				g_fullstatemanager_result.clear();
 
 				FullStateManager<FullStateManagerExample> i_manager;
@@ -70,13 +70,13 @@
 
 				g_fullstatemanager_result.assertExpectation("FullStateManagerMethod");
 
-				Base::TestResult i_result = g_fullstatemanager_result;
+				Base::TestResult<String> i_result = g_fullstatemanager_result;
 				g_fullstatemanager_result.clear();
 
 				return i_result;
 			}
 
-			Base::TestResult TR_FullStateManager_Testing_2(){
+			Base::TestResult<String> TR_FullStateManager_Testing_2(){
 				g_fullstatemanager_result.clear();
 
 				FullStateManager<FullStateManagerExample> i_manager;
@@ -89,13 +89,13 @@
 
 				g_fullstatemanager_result.assertExpectation("FullStateManagerExampleMethod");
 
-				Base::TestResult i_result = g_fullstatemanager_result;
+				Base::TestResult<String> i_result = g_fullstatemanager_result;
 				g_fullstatemanager_result.clear();
 
 				return i_result;
 			}
 
-			// Base::TestResult TR_FullStateManager_Testing_3(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_3(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -107,13 +107,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExampleMethod");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_4(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_4(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -125,13 +125,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("TPCFullStateManagerExampleMethod");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_5(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_5(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -143,13 +143,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExample::loop");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_6(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_6(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -161,13 +161,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExample::tpc_loop");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_7(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_7(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -181,13 +181,13 @@
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExampleAppState::initializeState");
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExampleAppState::updateState");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_8(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_8(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -199,13 +199,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerMethod");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_9(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_9(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -217,13 +217,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("TPCFullStateManagerMethod");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_10(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_10(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -235,13 +235,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExampleMethod");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_11(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_11(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -253,13 +253,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("TPCFullStateManagerExampleMethod");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_12(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_12(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -271,13 +271,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExample::loop");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// Base::TestResult TR_FullStateManager_Testing_13(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_13(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -289,13 +289,13 @@
 
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExample::tpc_loop");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			// // Base::TestResult TR_FullStateManager_Testing_14(){
+			// // Base::TestResult<String> TR_FullStateManager_Testing_14(){
 			// // 	g_fullstatemanager_result.clear();
 
 			// // 	FullStateManager<FullStateManagerExample> i_manager;
@@ -305,13 +305,13 @@
 
 			// // 	i_manager.update(i_example, 100l);
 
-			// // 	Base::TestResult i_result = g_fullstatemanager_result;
+			// // 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// // 	g_fullstatemanager_result.clear();
 
 			// // 	return i_result;
 			// // }
 
-			// Base::TestResult TR_FullStateManager_Testing_15(){
+			// Base::TestResult<String> TR_FullStateManager_Testing_15(){
 			// 	g_fullstatemanager_result.clear();
 
 			// 	FullStateManager<FullStateManagerExample> i_manager;
@@ -325,13 +325,13 @@
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExampleState::initializeState");
 			// 	g_fullstatemanager_result.assertExpectation("FullStateManagerExampleState::updateState");
 
-			// 	Base::TestResult i_result = g_fullstatemanager_result;
+			// 	Base::TestResult<String> i_result = g_fullstatemanager_result;
 			// 	g_fullstatemanager_result.clear();
 
 			// 	return i_result;
 			// }
 
-			void TR_FullStateManager_Testing(Base::TestRunner& a_test_runner){
+			void TR_FullStateManager_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("TR_FullStateManager_Testing add (single method) and update", TR_FullStateManager_Testing_1);
 				// a_test_runner.add("TR_FullStateManager_Testing add (tpc method) and update", TR_FullStateManager_Testing_2);
 				// a_test_runner.add("TR_FullStateManager_Testing add (loop example method) and update", TR_FullStateManager_Testing_3);

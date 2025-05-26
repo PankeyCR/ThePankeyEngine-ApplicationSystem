@@ -1,14 +1,32 @@
 
+namespace pankey{
+  template<class T>
+  String toString(const T& a_add){
+    return String(a_add);
+  }
+
+  template<class T>
+  String concat(const T& a_add){
+    return String(a_add);
+  }
+
+  template<class T, class... Args>
+  String concat(const T& a_string, const Args&... a_add){
+    String i_string = String(a_string) + concat(a_add...);
+    return i_string;
+  }
+}
+
 #include "TestRunner.hpp"
 
 #include "TR_AFL_Application_Testing.hpp"
 #include "TR_ASL_Application_Testing.hpp"
 #include "TR_ASL_SL_Application_Testing.hpp"
 //#include "TR_Application_Testing.hpp"
-#include "TR_AppStateListManager_Testing.hpp"
-#include "TR_AppStateMapManager_Testing.hpp"
-#include "TR_StateListManager_Testing.hpp"
-#include "TR_StateMapManager_Testing.hpp"
+#include "TR_IAppStateListManager_Testing.hpp"
+#include "TR_IAppStateMapManager_Testing.hpp"
+#include "TR_IStateListManager_Testing.hpp"
+#include "TR_IStateMapManager_Testing.hpp"
 #include "TR_ASL_SL_Manager_Testing.hpp"
 #include "TR_DefaultAppSettings_Testing.hpp"
 //#include "TR_FullStateManager_Testing.hpp"
@@ -33,21 +51,21 @@ void End() {
   Serial.println("End Test");
 }
 
-void Info(const pankey::Base::CharArray& a_test, const pankey::Base::CharArray& a_info) {
-  Serial.print("Test: "); Serial.println(a_test.pointer());
-  Serial.println(a_info.pointer());
+void Info(const String& a_test, const String& a_info) {
+  Serial.print("Test: "); Serial.println(a_test);
+  Serial.println(a_info);
 }
 
-void Error(const pankey::Base::CharArray& a_test, const pankey::Base::CharArray& a_error) {
-  Serial.print("Test: "); Serial.println(a_test.pointer());
-  Serial.println(a_error.pointer());
+void Error(const String& a_test, const String& a_error) {
+  Serial.print("Test: "); Serial.println(a_test);
+  Serial.println(a_error);
 }
 
 void Succes() {
   Serial.println("Test Complete with no errors");
 }
 
-TestRunner tester;
+TestRunner<String> tester;
 
 void setup() {
   Serial.begin(9600);
@@ -57,10 +75,10 @@ void setup() {
   TR_ASL_Application_Testing(tester);
   TR_ASL_SL_Application_Testing(tester);
   //  TR_Application_Testing(tester);
-    TR_AppStateListManager_Testing(tester);
-    TR_AppStateMapManager_Testing(tester);
-    TR_StateListManager_Testing(tester);
-    TR_StateMapManager_Testing(tester);
+    TR_IAppStateListManager_Testing(tester);
+    TR_IAppStateMapManager_Testing(tester);
+    TR_IStateListManager_Testing(tester);
+    TR_IStateMapManager_Testing(tester);
     TR_ASL_SL_Manager_Testing(tester);
     TR_DefaultAppSettings_Testing(tester);
   //  TR_FullStateManager_Testing(tester);
@@ -78,5 +96,6 @@ void setup() {
 void loop() {
   tester.runTest();
   tester.run();
+  // Serial.println(ESP.getFreeHeap());
   delay(3000);
 }

@@ -11,8 +11,8 @@
 
 		namespace ApplicationSystem{
 			
-			Base::TestResult TR_ASL_SL_Application_Testing_1(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_ASL_SL_Application_Testing_1(){
+				Base::TestResult<String> i_result;
 
 				ASL_SL_Application i_app;
 				
@@ -25,7 +25,7 @@
 				return i_result;
 			}
 
-			void TR_ASL_SL_Application_Testing(Base::TestRunner& a_test_runner){
+			void TR_ASL_SL_Application_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("ASL_SL_Application", TR_ASL_SL_Application_Testing_1);
 			}
 

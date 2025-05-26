@@ -2,7 +2,7 @@
 #ifndef ASL_Application_hpp
 	#define ASL_Application_hpp
 
-	#include "AppStateListManager.hpp"
+	#include "IAppStateListManager.hpp"
 	#include "DefaultAppSettings.hpp"
 	#include "TPC.hpp"
 
@@ -22,7 +22,7 @@
 					ASL_Application(){}
 					virtual ~ASL_Application(){}
 
-					virtual AppStateListManager<ASL_Application,long>& getStateManager(){
+					virtual IAppStateListManager<ASL_Application,long>& getStateManager(){
 						return this->m_states;
 					}
 
@@ -49,7 +49,7 @@
 					}
 
 				protected:
-					AppStateListManager<ASL_Application,long> m_states;
+					IAppStateListManager<ASL_Application,long> m_states;
 					DefaultAppSettings m_settings;
 					
 					Base::TPC m_tpc;

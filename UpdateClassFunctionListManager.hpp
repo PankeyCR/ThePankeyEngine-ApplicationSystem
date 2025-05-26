@@ -17,7 +17,7 @@
 		namespace ApplicationSystem{
 
 			template<class A, class... Args>
-			class UpdateClassFunctionListManager : virtual public UpdateManager<A&,Args...>{
+			class UpdateClassFunctionListManager : virtual public Base::UpdateManager<A&,Args...>{
 				public:
 
 					UpdateClassFunctionListManager(){}

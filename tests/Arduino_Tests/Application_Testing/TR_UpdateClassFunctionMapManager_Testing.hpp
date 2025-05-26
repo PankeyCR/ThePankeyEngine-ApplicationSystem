@@ -14,19 +14,19 @@
 		
 			class UpdateClassFunctionMapExample{
 				public:
-				void UpdateClassFunctionMapManagerTest(Base::TestResult& a_result, float a_tpc){
+				void UpdateClassFunctionMapManagerTest(Base::TestResult<String>& a_result, float a_tpc){
 					a_result.assertTrue("executing class method", true);
 				}
 
-				void UpdateClassFunctionMapManagerTestWithError(Base::TestResult& a_result, float a_tpc){
+				void UpdateClassFunctionMapManagerTestWithError(Base::TestResult<String>& a_result, float a_tpc){
 					a_result.assertTrue("executing class method with error", false);
 				}
 			};
 		
-			Base::TestResult TR_UpdateClassFunctionMapManager_Testing_1(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionMapManager_Testing_1(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionMapExample i_example;
 
 				i_manager.add("class_function", &UpdateClassFunctionMapExample::UpdateClassFunctionMapManagerTest);
@@ -36,10 +36,10 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateClassFunctionMapManager_Testing_2(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionMapManager_Testing_2(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionMapExample i_example;
 
 				i_manager.add("class_function", &UpdateClassFunctionMapExample::UpdateClassFunctionMapManagerTest);
@@ -52,10 +52,10 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateClassFunctionMapManager_Testing_3(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionMapManager_Testing_3(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionMapExample i_example;
 
 				i_manager.add("class_function", &UpdateClassFunctionMapExample::UpdateClassFunctionMapManagerTest);
@@ -68,10 +68,10 @@
 				return i_result;
 			}
 			
-			Base::TestResult TR_UpdateClassFunctionMapManager_Testing_4(){
-				Base::TestResult i_result;
+			Base::TestResult<String> TR_UpdateClassFunctionMapManager_Testing_4(){
+				Base::TestResult<String> i_result;
 
-				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult&,float> i_manager;
+				UpdateClassFunctionMapManager<UpdateClassFunctionMapExample,Base::CharArray,Base::TestResult<String>&,float> i_manager;
 				UpdateClassFunctionMapExample i_example;
 
 				i_manager.add("class_function", &UpdateClassFunctionMapExample::UpdateClassFunctionMapManagerTest);
@@ -87,7 +87,7 @@
 				return i_result;
 			}
 
-			void TR_UpdateClassFunctionMapManager_Testing(Base::TestRunner& a_test_runner){
+			void TR_UpdateClassFunctionMapManager_Testing(Base::TestRunner<String>& a_test_runner){
 				a_test_runner.add("UpdateClassFunctionMapManager add and update", TR_UpdateClassFunctionMapManager_Testing_1);
 				a_test_runner.add("UpdateClassFunctionMapManager removeUpdate by lvalue", TR_UpdateClassFunctionMapManager_Testing_2);
 				a_test_runner.add("UpdateClassFunctionMapManager removeUpdate by index", TR_UpdateClassFunctionMapManager_Testing_3);
