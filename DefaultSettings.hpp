@@ -1,19 +1,19 @@
 
-#ifndef DefaultAppSettings_hpp
-	#define DefaultAppSettings_hpp
+#ifndef DefaultSettings_hpp
+	#define DefaultSettings_hpp
 
-	#include "AppSettings.hpp"
+	#include "Settings.hpp"
 	#include "ArrayRawMap.hpp"
 
 	namespace pankey{
 
 		namespace ApplicationSystem{
 
-			class DefaultAppSettings : public AppSettings{
+			class DefaultSettings : public Settings{
 				public:
-					DefaultAppSettings(){}
+					DefaultSettings(){}
 
-					virtual ~DefaultAppSettings(){}
+					virtual ~DefaultSettings(){}
 					
 					virtual void addInt(const Base::CharArray& a_name, int a_var){
 						m_int_map.add(a_name, a_var);
@@ -112,35 +112,35 @@
 					}
 					
 					virtual void addCharArray(const Base::CharArray& a_name, const Base::CharArray& a_var){
-						m_chararray_map.add(a_name, a_var);
+						m_chars_map.add(a_name, a_var);
 					}
 
 					virtual void putCharArray(const Base::CharArray& a_name, const Base::CharArray& a_var){
-						m_chararray_map.put(a_name, a_var);
+						m_chars_map.put(a_name, a_var);
 					}
 
 					virtual void setCharArray(const Base::CharArray& a_name, const Base::CharArray& a_var){
-						m_chararray_map.set(a_name, a_var);
+						m_chars_map.set(a_name, a_var);
 					}
 
 					virtual void changeCharArray(const Base::CharArray& a_name, const Base::CharArray& a_var){
-						if(m_chararray_map.containKey(a_name)){
-							m_chararray_map.set(a_name, a_var);
+						if(m_chars_map.containKey(a_name)){
+							m_chars_map.set(a_name, a_var);
 						}else{
-							m_chararray_map.add(a_name, a_var);
+							m_chars_map.add(a_name, a_var);
 						}
 					}
 
 					virtual Base::CharArray getCharArray(const Base::CharArray& a_name){
-						return m_chararray_map.get(a_name);
+						return m_chars_map.get(a_name);
 					}
 
 					virtual void removeCharArray(const Base::CharArray& a_name){
-						m_chararray_map.destroyByKey(a_name);
+						m_chars_map.destroyByKey(a_name);
 					}
 
 					virtual bool containCharArray(const Base::CharArray& a_name){
-						return m_chararray_map.containKey(a_name);
+						return m_chars_map.containKey(a_name);
 					}
 					
 					virtual void addBoolean(const Base::CharArray& a_name, bool a_var){
@@ -180,7 +180,7 @@
 					Base::ArrayRawMap<Base::CharArray,int> m_int_map;
 					Base::ArrayRawMap<Base::CharArray,float> m_long_map;
 					Base::ArrayRawMap<Base::CharArray,float> m_float_map;
-					Base::ArrayRawMap<Base::CharArray,Base::CharArray> m_chararray_map;
+					Base::ArrayRawMap<Base::CharArray,Base::CharArray> m_chars_map;
 					Base::ArrayRawMap<Base::CharArray,bool> m_boolean_map;
 			};
 

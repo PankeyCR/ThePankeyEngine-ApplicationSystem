@@ -50,11 +50,11 @@
 						this->m_update_function_map.clear();
 					}
 					
-					virtual int Function_length(){
+					virtual int Function_length()const{
 						return this->m_update_function_map.length();
 					}
 					
-					virtual int length(){
+					virtual int length()const{
 						return this->m_update_function_map.length();
 					}
 					

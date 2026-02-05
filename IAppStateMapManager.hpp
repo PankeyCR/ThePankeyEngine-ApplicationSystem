@@ -3,7 +3,7 @@
 	#define IAppStateMapManager_hpp
 
 	#include "iAppState.hpp"
-	#include "ClassCount.hpp"
+	#include "ClassType.hpp"
 	#include "ArrayRawList.hpp"
 	#include "UpdateManager.hpp"
 
@@ -19,7 +19,7 @@
 		namespace ApplicationSystem{
 
 			template<class A, class... Args>
-			class IAppStateMapManager : virtual public Base::UpdateManager<A,Args...>{
+			class IAppStateMapManager : virtual public UpdateManager<A,Args...>{
 				public:
 					IAppStateMapManager(){
 						IAppStateMapManagerLog(pankey_Log_StartMethod, "Constructor", "");
@@ -66,7 +66,7 @@
 					template<class AS>
 					bool containIAppState(){
 						IAppStateMapManagerLog(pankey_Log_StartMethod, "containAppState",  "");
-						long i_type = Base::ClassCount<AS>::get();
+						long i_type = Base::ClassType<AS>::getId();
 						IAppStateMapManagerLog(pankey_Log_EndMethod, "containAppState", "");
 						return this->containIAppState(i_type);
 					}
@@ -74,7 +74,7 @@
 					template<class AS>
 					void putIAppState(const Base::CharArray& a_name){
 						IAppStateMapManagerLog(pankey_Log_StartMethod, "putAppState",  "");
-						if(this->containIAppState(Base::ClassCount<AS>::get())){
+						if(this->containIAppState(Base::ClassType<AS>::getId())){
 							return;
 						}
 						this->addIAppStatePointer(a_name, new AS());
@@ -85,7 +85,7 @@
 						return m_appstate_map.length() + m_initialize_appstate_map.length();
 					}
 
-					virtual int length(){
+					virtual int length()const{
 						return m_appstate_map.length() + m_initialize_appstate_map.length();
 					}
 					
@@ -176,7 +176,7 @@
 					template<class AS, class... MArgs>
 					void runIAppStateMethod(Base::InvokeClassMethod<AS,MArgs...> a_method, MArgs... a_args){
 						IAppStateMapManagerLog(pankey_Log_StartMethod, "runAppStateMethod",  "");
-						Base::Type* f_state = this->getIAppStatePointerByType(Base::ClassCount<AS>::get());
+						Base::Type* f_state = this->getIAppStatePointerByType(Base::ClassType<AS>::getId());
 						if(f_state == nullptr){
 							IAppStateMapManagerLog(pankey_Log_EndMethod, "runAppStateMethod", "f_state == nullptr");
 							return;

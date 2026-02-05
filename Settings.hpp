@@ -1,6 +1,6 @@
 
-#ifndef AppSettings_hpp
-	#define AppSettings_hpp
+#ifndef Settings_hpp
+	#define Settings_hpp
 
 	#include "CharArray.hpp"
 
@@ -8,9 +8,17 @@
 
 		namespace ApplicationSystem{
 		
-			class AppSettings{
+			class Settings{
 				public:
-					virtual ~AppSettings(){}
+					Settings() = default;
+
+					Settings(const Settings&) = delete;
+					Settings& operator=(const Settings&) = delete;
+
+					Settings(Settings&&) = delete;
+					Settings& operator=(Settings&&) = delete;
+
+					virtual ~Settings(){}
 					
 					virtual void addInt(const Base::CharArray& a_name,int a_var)=0;
 					virtual void putInt(const Base::CharArray& a_name, int a_var)=0;

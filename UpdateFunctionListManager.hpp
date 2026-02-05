@@ -17,7 +17,7 @@
 		namespace ApplicationSystem{
 
 			template<class A, class... Args>
-			class UpdateFunctionListManager : virtual public Base::UpdateManager<A,Args...>{
+			class UpdateFunctionListManager : virtual public UpdateManager<A,Args...>{
 				public:
 
 					UpdateFunctionListManager(){
@@ -29,7 +29,7 @@
 						UpdateFunctionListManagerLog(pankey_Log_EndMethod, "Destructor", "");
 					}
 
-					virtual void putFunction(Base::InvokeFunction<Args...> a_state){
+					virtual void put(Base::InvokeFunction<Args...> a_state){
 						this->m_uf_list.put(a_state);
 					}
 					
@@ -80,11 +80,11 @@
 						}
 					}
 					
-					virtual int Function_length(){
+					virtual int Function_length()const{
 						return this->m_uf_list.length();
 					}
 					
-					virtual int length(){
+					virtual int length()const{
 						return this->m_uf_list.length();
 					}
 					
